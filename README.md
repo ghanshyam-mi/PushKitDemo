@@ -19,4 +19,4 @@ With iOS 8 Apple introduced PushKit. PushKit improves battery life, performance 
 
 
 # LICENSE!
-PushKitDemo is MIT-licensed.
+PushKitDemo is [MIT-licensed](/LICENSE).
