@@ -94,7 +94,7 @@ extension AppDelegate : PKPushRegistryDelegate {
     }
     
     // Handle incoming pushes
-    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
+    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
          print(payload.dictionaryPayload)
         
         let payloadDict = payload.dictionaryPayload["aps"] as? [String:Any] ?? [:]
