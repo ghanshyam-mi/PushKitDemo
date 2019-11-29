@@ -13,6 +13,9 @@
 		62B4E35623913F8A0096F99F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B4E35423913F8A0096F99F /* Main.storyboard */; };
 		62B4E35823913F8B0096F99F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B4E35723913F8B0096F99F /* Assets.xcassets */; };
 		62B4E35B23913F8B0096F99F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B4E35923913F8B0096F99F /* LaunchScreen.storyboard */; };
+		62B4E364239141740096F99F /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B4E363239141740096F99F /* PushKit.framework */; };
+		62B4E3662391417C0096F99F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B4E3652391417C0096F99F /* UserNotifications.framework */; };
+		62B4E369239142200096F99F /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B4E368239142200096F99F /* CallKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,10 @@
 		62B4E35723913F8B0096F99F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62B4E35A23913F8B0096F99F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62B4E35C23913F8B0096F99F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62B4E363239141740096F99F /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		62B4E3652391417C0096F99F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		62B4E367239141A80096F99F /* PuskKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PuskKitDemo.entitlements; sourceTree = "<group>"; };
+		62B4E368239142200096F99F /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B4E369239142200096F99F /* CallKit.framework in Frameworks */,
+				62B4E3662391417C0096F99F /* UserNotifications.framework in Frameworks */,
+				62B4E364239141740096F99F /* PushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				62B4E34D23913F8A0096F99F /* PuskKitDemo */,
 				62B4E34C23913F8A0096F99F /* Products */,
+				62B4E362239141730096F99F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +67,7 @@
 		62B4E34D23913F8A0096F99F /* PuskKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				62B4E367239141A80096F99F /* PuskKitDemo.entitlements */,
 				62B4E34E23913F8A0096F99F /* AppDelegate.swift */,
 				62B4E35023913F8A0096F99F /* SceneDelegate.swift */,
 				62B4E35223913F8A0096F99F /* ViewController.swift */,
@@ -65,6 +77,16 @@
 				62B4E35C23913F8B0096F99F /* Info.plist */,
 			);
 			path = PuskKitDemo;
+			sourceTree = "<group>";
+		};
+		62B4E362239141730096F99F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B4E368239142200096F99F /* CallKit.framework */,
+				62B4E3652391417C0096F99F /* UserNotifications.framework */,
+				62B4E363239141740096F99F /* PushKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +306,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = PuskKitDemo/PuskKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PuskKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MI.PuskKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,7 +327,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = PuskKitDemo/PuskKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PuskKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +338,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MI.PuskKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
